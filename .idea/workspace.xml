@@ -8,6 +8,16 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="1S6he0ybxC7YJcND2WzkVWlzDuK" />
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -21,6 +31,125 @@
       </list>
     </option>
   </component>
+  <component name="RunManager" selected="JUnit.TemperatureSeriesAnalysisTest">
+    <configuration name="TemperatureSeriesAnalysisTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TemperatureSeries" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ua.edu.ucu.tempseries.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="C:/Program Files/Java/jdk-12.0.2" />
+      <option name="PACKAGE_NAME" value="ua.edu.ucu.tempseries" />
+      <option name="MAIN_CLASS_NAME" value="ua.edu.ucu.tempseries.TemperatureSeriesAnalysisTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="PARAMETERS" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TemperatureSeriesAnalysisTest.testAverage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TemperatureSeries" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ua.edu.ucu.tempseries.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="C:/Program Files/Java/jdk-12.0.2" />
+      <option name="PACKAGE_NAME" value="ua.edu.ucu.tempseries" />
+      <option name="MAIN_CLASS_NAME" value="ua.edu.ucu.tempseries.TemperatureSeriesAnalysisTest" />
+      <option name="METHOD_NAME" value="testAverage" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="PARAMETERS" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TemperatureSeriesAnalysisTest.testClosestToValue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TemperatureSeries" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ua.edu.ucu.tempseries.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="C:/Program Files/Java/jdk-12.0.2" />
+      <option name="PACKAGE_NAME" value="ua.edu.ucu.tempseries" />
+      <option name="MAIN_CLASS_NAME" value="ua.edu.ucu.tempseries.TemperatureSeriesAnalysisTest" />
+      <option name="METHOD_NAME" value="testClosestToValue" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="PARAMETERS" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TemperatureSeriesAnalysisTest.testDeviation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TemperatureSeries" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ua.edu.ucu.tempseries.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="C:/Program Files/Java/jdk-12.0.2" />
+      <option name="PACKAGE_NAME" value="ua.edu.ucu.tempseries" />
+      <option name="MAIN_CLASS_NAME" value="ua.edu.ucu.tempseries.TemperatureSeriesAnalysisTest" />
+      <option name="METHOD_NAME" value="testDeviation" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="PARAMETERS" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TemperatureSeriesAnalysisTest.testDeviationWithEmptyArray" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TemperatureSeries" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ua.edu.ucu.tempseries.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="C:/Program Files/Java/jdk-12.0.2" />
+      <option name="PACKAGE_NAME" value="ua.edu.ucu.tempseries" />
+      <option name="MAIN_CLASS_NAME" value="ua.edu.ucu.tempseries.TemperatureSeriesAnalysisTest" />
+      <option name="METHOD_NAME" value="testDeviationWithEmptyArray" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="PARAMETERS" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <module name="TemperatureSeries" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="C:/Program Files/Java/jdk-12.0.2" />
+      <option name="PACKAGE_NAME" value="ua.edu.ucu.tempseries" />
+      <option name="MAIN_CLASS_NAME" value="ua.edu.ucu.tempseries.TemperatureSeriesAnalysisTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="PARAMETERS" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.TemperatureSeriesAnalysisTest" />
+        <item itemvalue="JUnit.TemperatureSeriesAnalysisTest.testClosestToValue" />
+        <item itemvalue="JUnit.TemperatureSeriesAnalysisTest.testDeviationWithEmptyArray" />
+        <item itemvalue="JUnit.TemperatureSeriesAnalysisTest.testDeviation" />
+        <item itemvalue="JUnit.TemperatureSeriesAnalysisTest.testAverage" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -33,5 +162,18 @@
       <updated>1570890045181</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
