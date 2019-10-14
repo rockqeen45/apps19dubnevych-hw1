@@ -51,25 +51,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TemperatureSeriesAnalysisTest.testAverage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TemperatureSeries" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ua.edu.ucu.tempseries.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="ALTERNATIVE_JRE_PATH" value="C:/Program Files/Java/jdk-12.0.2" />
-      <option name="PACKAGE_NAME" value="ua.edu.ucu.tempseries" />
-      <option name="MAIN_CLASS_NAME" value="ua.edu.ucu.tempseries.TemperatureSeriesAnalysisTest" />
-      <option name="METHOD_NAME" value="testAverage" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="PARAMETERS" value="" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="TemperatureSeriesAnalysisTest.testClosestToValue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TemperatureSeries" />
       <extension name="coverage">
@@ -83,6 +64,25 @@
       <option name="PACKAGE_NAME" value="ua.edu.ucu.tempseries" />
       <option name="MAIN_CLASS_NAME" value="ua.edu.ucu.tempseries.TemperatureSeriesAnalysisTest" />
       <option name="METHOD_NAME" value="testClosestToValue" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="PARAMETERS" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TemperatureSeriesAnalysisTest.testConstructorFailure" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TemperatureSeries" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ua.edu.ucu.tempseries.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="C:/Program Files/Java/jdk-12.0.2" />
+      <option name="PACKAGE_NAME" value="ua.edu.ucu.tempseries" />
+      <option name="MAIN_CLASS_NAME" value="ua.edu.ucu.tempseries.TemperatureSeriesAnalysisTest" />
+      <option name="METHOD_NAME" value="testConstructorFailure" />
       <option name="TEST_OBJECT" value="method" />
       <option name="PARAMETERS" value="" />
       <method v="2">
@@ -143,10 +143,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.TemperatureSeriesAnalysisTest" />
+        <item itemvalue="JUnit.TemperatureSeriesAnalysisTest.testConstructorFailure" />
         <item itemvalue="JUnit.TemperatureSeriesAnalysisTest.testClosestToValue" />
         <item itemvalue="JUnit.TemperatureSeriesAnalysisTest.testDeviationWithEmptyArray" />
         <item itemvalue="JUnit.TemperatureSeriesAnalysisTest.testDeviation" />
-        <item itemvalue="JUnit.TemperatureSeriesAnalysisTest.testAverage" />
       </list>
     </recent_temporary>
   </component>

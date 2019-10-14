@@ -5,6 +5,8 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.InputMismatchException;
+
 public class TemperatureSeriesAnalysisTest {
 
     TemperatureSeriesAnalysis seriesAnalysis;
@@ -152,4 +154,11 @@ public class TemperatureSeriesAnalysisTest {
     public void testAddTemp() {
         assertEquals(7, seriesAnalysis.addTemps(1.0, 2.0, 3.0));
     }
+
+    @Test(expected = InputMismatchException.class)
+    public void testConstructorFailure() {
+        double[] temperatureSeries = {3.0, -5.0, 1.0, 5.0, -274.0};
+        TemperatureSeriesAnalysis seriesTest = new TemperatureSeriesAnalysis(temperatureSeries);
+    }
+
 }

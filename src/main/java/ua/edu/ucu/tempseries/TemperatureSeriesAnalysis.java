@@ -22,10 +22,14 @@ public class TemperatureSeriesAnalysis {
         this.len = this.temperatureSeries.length;
     }
 
-    public double average() {
-        if (this.len == 0){
+    private void notEmpty(){
+        if (this.len == 0) {
             throw new IllegalArgumentException();
         }
+    }
+
+    public double average() {
+        this.notEmpty();
         double sum = 0;
         for (int i = 0; i < this.len; i++){
             sum += this.temperatureSeries[i];
@@ -35,9 +39,7 @@ public class TemperatureSeriesAnalysis {
     }
 
     public double deviation() {
-        if (this.len == 0){
-            throw new IllegalArgumentException();
-        }
+        this.notEmpty();
         double deviation = 0;
         for (int i = 0; i < this.len; i++) {
             deviation += Math.pow(this.temperatureSeries[i] - this.average(),2);
@@ -47,9 +49,7 @@ public class TemperatureSeriesAnalysis {
     }
 
     public double min() {
-        if (this.len == 0){
-            throw new IllegalArgumentException();
-        }
+        this.notEmpty();
         double min = Integer.MAX_VALUE;
         for (int i = 0; i < this.len; i++) {
             if (this.temperatureSeries[i] < min){
@@ -60,9 +60,7 @@ public class TemperatureSeriesAnalysis {
     }
 
     public double max() {
-        if (this.len == 0) {
-            throw new IllegalArgumentException();
-        }
+        this.notEmpty();
         double max = Integer.MIN_VALUE;
         for (int i = 0; i < this.len; i++) {
             if (this.temperatureSeries[i] > max){
@@ -73,9 +71,7 @@ public class TemperatureSeriesAnalysis {
     }
 
     public double findTempClosestToZero() {
-        if (this.len == 0){
-            throw new IllegalArgumentException();
-        }
+        this.notEmpty();
         double closest = Integer.MAX_VALUE;
         for (int i = 0; i < this.len; i++) {
             if (Math.abs(this.temperatureSeries[i]) < Math.abs(closest)){
@@ -91,9 +87,7 @@ public class TemperatureSeriesAnalysis {
     }
 
     public double findTempClosestToValue(double tempValue) {
-        if (this.len == 0){
-            throw new IllegalArgumentException();
-        }
+        this.notEmpty();
         double closest = Integer.MAX_VALUE;
         for (int i = 0; i < this.len; i++) {
             if (Math.abs(this.temperatureSeries[i] - tempValue) < Math.abs(closest - tempValue)){
@@ -109,9 +103,7 @@ public class TemperatureSeriesAnalysis {
     }
 
     public double[] findTempsLessThan(double tempValue) {
-        if (this.len == 0){
-            throw new IllegalArgumentException();
-        }
+        this.notEmpty();
         int n = 0;
         for (int i = 0; i < this.len; i++) {
             if (this.temperatureSeries[i] < tempValue){
@@ -130,9 +122,7 @@ public class TemperatureSeriesAnalysis {
     }
 
     public double[] findTempsGreaterThan(double tempValue) {
-        if (this.len == 0){
-            throw new IllegalArgumentException();
-        }
+        this.notEmpty();
         int n = 0;
         for (int i = 0; i < this.len; i++) {
             if (this.temperatureSeries[i] > tempValue){
@@ -151,9 +141,7 @@ public class TemperatureSeriesAnalysis {
     }
 
     public TempSummaryStatistics summaryStatistics() {
-        if (this.len == 0) {
-            throw new IllegalArgumentException();
-        }
+        this.notEmpty();
         double avgTemp = this.average();
         double devTemp = this.deviation();
         double minTemp = this.min();
