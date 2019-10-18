@@ -4,6 +4,7 @@ import java.util.InputMismatchException;
 
 public class TemperatureSeriesAnalysis {
 
+    public static final double MIN_TEMPERATURE = -273.0;
     private double[] temperatureSeries;
     private int len;
 
@@ -14,7 +15,7 @@ public class TemperatureSeriesAnalysis {
 
     public TemperatureSeriesAnalysis(double[] temperatureSeries) {
         for (double temperature : temperatureSeries) {
-            if (temperature < -273.0) {
+            if (temperature < TemperatureSeriesAnalysis.MIN_TEMPERATURE) {
                 throw new InputMismatchException();
             }
         }
@@ -76,10 +77,9 @@ public class TemperatureSeriesAnalysis {
         for (int i = 0; i < this.len; i++) {
             if (Math.abs(this.temperatureSeries[i]) < Math.abs(closest)) {
                 closest = this.temperatureSeries[i];
-            } else if (Double.compare(Math.abs(this.temperatureSeries[i]), Math.abs(closest)) == 0) {
-                if (this.temperatureSeries[i] > closest){
+            } else if (Double.compare(Math.abs(this.temperatureSeries[i]), Math.abs(closest)) == 0
+                    && this.temperatureSeries[i] > closest) {
                     closest = this.temperatureSeries[i];
-                }
             }
         }
         return closest;
@@ -89,14 +89,14 @@ public class TemperatureSeriesAnalysis {
         this.notEmpty();
         double closest = Integer.MAX_VALUE;
         for (int i = 0; i < this.len; i++) {
-            if (Math.abs(this.temperatureSeries[i] - tempValue) < Math.abs(closest - tempValue)) {
+            if (Math.abs(this.temperatureSeries[i] - tempValue) <
+                                    Math.abs(closest - tempValue)) {
                 closest = this.temperatureSeries[i];
             }
             else if (Double.compare(Math.abs(this.temperatureSeries[i] - tempValue),
-                    Math.abs(closest - tempValue)) == 0) {
-                if (this.temperatureSeries[i] > closest) {
+                        Math.abs(closest - tempValue)) == 0
+                        && this.temperatureSeries[i] > closest) {
                     closest = this.temperatureSeries[i];
-                }
             }
         }
         return closest;
