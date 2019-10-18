@@ -4,8 +4,8 @@ import java.util.InputMismatchException;
 
 public class TemperatureSeriesAnalysis {
 
-    double[] temperatureSeries;
-    int len;
+    private double[] temperatureSeries;
+    private int len;
 
     public TemperatureSeriesAnalysis() {
         this.temperatureSeries = new double[1];
@@ -13,8 +13,8 @@ public class TemperatureSeriesAnalysis {
     }
 
     public TemperatureSeriesAnalysis(double[] temperatureSeries) {
-        for (int i = 0; i < temperatureSeries.length; i++) {
-            if (temperatureSeries[i] < -273.0) {
+        for (double temperature : temperatureSeries) {
+            if (temperature < -273.0) {
                 throw new InputMismatchException();
             }
         }
@@ -74,10 +74,9 @@ public class TemperatureSeriesAnalysis {
         this.notEmpty();
         double closest = Integer.MAX_VALUE;
         for (int i = 0; i < this.len; i++) {
-            if (Math.abs(this.temperatureSeries[i]) < Math.abs(closest)){
+            if (Math.abs(this.temperatureSeries[i]) < Math.abs(closest)) {
                 closest = this.temperatureSeries[i];
-            }
-            else if (Math.abs(this.temperatureSeries[i]) == Math.abs(closest)){
+            } else if (Math.abs(this.temperatureSeries[i]) == Math.abs(closest)) {
                 if (this.temperatureSeries[i] > closest){
                     closest = this.temperatureSeries[i];
                 }

@@ -139,10 +139,10 @@ public class TemperatureSeriesAnalysisTest {
     @Test
     public void testTempSummaryStatistics() {
         TempSummaryStatistics statistics = seriesAnalysis.summaryStatistics();
-        assertEquals(1.0, statistics.avgTemp, 0.00001);
-        assertEquals(3.7416573867739, statistics.devTemp, 0.00001);
-        assertEquals(-5.0, statistics.minTemp, 0.00001);
-        assertEquals(5.0, statistics.maxTemp, 0.00001);
+        assertEquals(1.0, statistics.getAvgTemp(), 0.00001);
+        assertEquals(3.7416573867739, statistics.getDevTemp(), 0.00001);
+        assertEquals(-5.0, statistics.getMinTemp(), 0.00001);
+        assertEquals(5.0, statistics.getMaxTemp(), 0.00001);
     }
 
     @Test
