@@ -43,7 +43,7 @@ public class TemperatureSeriesAnalysis {
         this.notEmpty();
         double deviation = 0;
         for (int i = 0; i < this.len; i++) {
-            deviation += Math.pow(this.temperatureSeries[i] - this.average(), 2);
+            deviation += Math.pow(temperatureSeries[i] - average(), 2);
         }
         deviation /= this.len;
         return Math.sqrt(deviation);
