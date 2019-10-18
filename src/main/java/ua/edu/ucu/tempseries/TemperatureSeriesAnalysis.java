@@ -22,7 +22,7 @@ public class TemperatureSeriesAnalysis {
         this.len = this.temperatureSeries.length;
     }
 
-    private void notEmpty(){
+    private void notEmpty() {
         if (this.len == 0) {
             throw new IllegalArgumentException();
         }
@@ -31,7 +31,7 @@ public class TemperatureSeriesAnalysis {
     public double average() {
         this.notEmpty();
         double sum = 0;
-        for (int i = 0; i < this.len; i++){
+        for (int i = 0; i < this.len; i++) {
             sum += this.temperatureSeries[i];
         }
         double average = sum / this.len;
@@ -52,7 +52,7 @@ public class TemperatureSeriesAnalysis {
         this.notEmpty();
         double min = Integer.MAX_VALUE;
         for (int i = 0; i < this.len; i++) {
-            if (this.temperatureSeries[i] < min){
+            if (this.temperatureSeries[i] < min) {
                 min = this.temperatureSeries[i];
             }
         }
@@ -63,7 +63,7 @@ public class TemperatureSeriesAnalysis {
         this.notEmpty();
         double max = Integer.MIN_VALUE;
         for (int i = 0; i < this.len; i++) {
-            if (this.temperatureSeries[i] > max){
+            if (this.temperatureSeries[i] > max) {
                 max = this.temperatureSeries[i];
             }
         }
@@ -76,7 +76,7 @@ public class TemperatureSeriesAnalysis {
         for (int i = 0; i < this.len; i++) {
             if (Math.abs(this.temperatureSeries[i]) < Math.abs(closest)) {
                 closest = this.temperatureSeries[i];
-            } else if (Math.abs(this.temperatureSeries[i]) == Math.abs(closest)) {
+            } else if (Double.compare(Math.abs(this.temperatureSeries[i]), Math.abs(closest)) == 0) {
                 if (this.temperatureSeries[i] > closest){
                     closest = this.temperatureSeries[i];
                 }
@@ -89,11 +89,11 @@ public class TemperatureSeriesAnalysis {
         this.notEmpty();
         double closest = Integer.MAX_VALUE;
         for (int i = 0; i < this.len; i++) {
-            if (Math.abs(this.temperatureSeries[i] - tempValue) < Math.abs(closest - tempValue)){
+            if (Math.abs(this.temperatureSeries[i] - tempValue) < Math.abs(closest - tempValue)) {
                 closest = this.temperatureSeries[i];
             }
-            else if (Math.abs(this.temperatureSeries[i] - tempValue) == Math.abs(closest - tempValue)){
-                if (this.temperatureSeries[i] > closest){
+            else if (Double.compare(Math.abs(this.temperatureSeries[i]), Math.abs(closest)) == 0) {
+                if (this.temperatureSeries[i] > closest) {
                     closest = this.temperatureSeries[i];
                 }
             }
@@ -105,14 +105,14 @@ public class TemperatureSeriesAnalysis {
         this.notEmpty();
         int n = 0;
         for (int i = 0; i < this.len; i++) {
-            if (this.temperatureSeries[i] < tempValue){
+            if (this.temperatureSeries[i] < tempValue) {
                 n++;
             }
         }
         double[] lessValues = new double[n];
         int j = 0;
         for (int i = 0; i < this.len; i++) {
-            if (this.temperatureSeries[i] < tempValue){
+            if (this.temperatureSeries[i] < tempValue) {
                 lessValues[j] = this.temperatureSeries[i];
                 j++;
             }
@@ -124,14 +124,14 @@ public class TemperatureSeriesAnalysis {
         this.notEmpty();
         int n = 0;
         for (int i = 0; i < this.len; i++) {
-            if (this.temperatureSeries[i] > tempValue){
+            if (this.temperatureSeries[i] > tempValue) {
                 n++;
             }
         }
         double[] greaterValues = new double[n];
         int j = 0;
         for (int i = 0; i < this.len; i++) {
-            if (this.temperatureSeries[i] > tempValue){
+            if (this.temperatureSeries[i] > tempValue) {
                 greaterValues[j] = this.temperatureSeries[i];
                 j++;
             }
