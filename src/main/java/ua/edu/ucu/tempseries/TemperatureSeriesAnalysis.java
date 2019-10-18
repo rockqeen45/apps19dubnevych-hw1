@@ -44,7 +44,7 @@ public class TemperatureSeriesAnalysis {
         double deviation = 0;
         for (int i = 0; i < this.len; i++) {
             double difference = temperatureSeries[i] - average();
-            deviation += Math.pow(difference, 2);
+            deviation += difference * difference;
         }
         deviation /= this.len;
         return Math.sqrt(deviation);
