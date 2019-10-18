@@ -43,7 +43,7 @@ public class TemperatureSeriesAnalysis {
         this.notEmpty();
         double deviation = 0;
         for (int i = 0; i < this.len; i++) {
-            deviation += Math.pow(this.temperatureSeries[i] - this.average(),2);
+            deviation += Math.pow(this.temperatureSeries[i] - this.average(), 2);
         }
         deviation /= this.len;
         return Math.sqrt(deviation);
@@ -75,10 +75,14 @@ public class TemperatureSeriesAnalysis {
         this.notEmpty();
         double closest = Integer.MAX_VALUE;
         for (int i = 0; i < this.len; i++) {
+            int comp = Double.compare(
+                    Math.abs(this.temperatureSeries[i]),
+                    Math.abs(closest)
+            );
             if (Math.abs(this.temperatureSeries[i]) < Math.abs(closest)) {
                 closest = this.temperatureSeries[i];
-            } else if (Double.compare(Math.abs(this.temperatureSeries[i]), Math.abs(closest)) == 0
-                    && this.temperatureSeries[i] > closest) {
+            }
+            else if (comp == 0 && this.temperatureSeries[i] > closest) {
                     closest = this.temperatureSeries[i];
             }
         }
@@ -89,13 +93,15 @@ public class TemperatureSeriesAnalysis {
         this.notEmpty();
         double closest = Integer.MAX_VALUE;
         for (int i = 0; i < this.len; i++) {
+            int comp = Double.compare(
+                    Math.abs(this.temperatureSeries[i] - tempValue),
+                    Math.abs(closest - tempValue)
+            );
             if (Math.abs(this.temperatureSeries[i] - tempValue)
                     < Math.abs(closest - tempValue)) {
                 closest = this.temperatureSeries[i];
             }
-            else if (Double.compare(Math.abs(this.temperatureSeries[i] - tempValue),
-                        Math.abs(closest - tempValue)) == 0
-                        && this.temperatureSeries[i] > closest) {
+            else if (comp == 0 && this.temperatureSeries[i] > closest) {
                     closest = this.temperatureSeries[i];
             }
         }
